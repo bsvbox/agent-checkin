@@ -40,7 +40,15 @@ event, so any Agent ID holder can verify the ranking on-chain.
   134325311)
 - BscScan: https://bscscan.com/address/0x47fedd8b285dd951b835bb18eced4adb22a44c7d
   (verified, "Exact Match", 18 Nov 21:18 WIB)
-- Source: ~/workspace/agent-checkin-hackathon (single file src/AgentCheckin.sol)
+- **STATUS: SUBMITTED 18 Nov 2026 22:32 WIB** — konfirmasi halaman:
+  "Survey already completed — You have already completed this survey.
+  Thanks for your support to Binance." (form Chrome mase; Code Repository
+  diperbaiki ke https://github.com/bsvbox/agent-checkin via Edit Response)
+- Team Name: Agent Check-in (solo); Contact Email: iboxyz7@gmail.com;
+  Telegram: @bsvbox; Reward Receiving Address:
+  0x362EfA2466A6c6604ee2Dca9D08d4CfabB18b26F. Form TIDAK punya kolom untuk
+  Agent ID mase.ai maupun Binance UID 54821112 (Q1-Q19 dicek, tidak ada).
+- Demo video (Q12, wajib): https://github.com/bsvbox/agent-checkin/releases/download/v1.0/agent-checkin-demo.mp4 — 42 detik, 1280x720, MP4, dibuat 18 Nov 22:2x WIB dari screenshot asli halaman + narasi Inggris (TTS); dirilis sebagai release v1.0 (link permanen; link penyimpanan Muse kedaluwarsa 20 Nov jadi TIDAK dipakai).
 - Announcement: https://www.binance.com/en/support/announcement/detail/95f5dbe0ea674a48a739b59e046648bf
 - Submit form: https://app.binance.com/uni-qr/user-survey/fb26d2bd25e04329b1ba77c7b3811d23
 

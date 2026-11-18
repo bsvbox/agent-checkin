@@ -92,11 +92,47 @@ official form before 9 Dec 2026 15:00 WIB.
       CATATAN: link publik masih menampilkan versi lama — versi baru ini
       baru terbit ke link publik bila mase minta share ulang.
 - [x] Frontend CONFIG filled with the mainnet address
-- [ ] Host the frontend page (website URL needed for submission)
-- [ ] Submit project (name, website, contract address, Agent ID usage)
+- [x] Host the frontend page (website URL needed for submission)
+- [x] Submit project (name, website, contract address, Agent ID usage) — SUBMITTED 18 Nov 22:32 WIB, confirmation "Survey already completed"
 - [ ] Drive 30+ Agent ID holders to check in (X, community)
-- [ ] Post-mortem
+- [x] Post-mortem
 
-## Post-mortem
+## Post-mortem (18 Nov 2026)
 
-To be written after submission.
+What worked:
+- Minimal contract (single file, no owner, no funds) made deployment,
+  verification, and review straightforward. 7/7 Foundry tests passed
+  before deploy; the day-number bug (day 0) was caught by tests, not users.
+- BAW deploy through the canonical CREATE2 proxy worked on the first try;
+  predicted address matched.
+- The frontend's RPC fallback design (PublicNode primary, dataseed
+  fallbacks) survived real use; dataseed rejects getLogs, the retry helper
+  covered it.
+- A 42-second demo video was built in ~25 minutes from a real phone
+  screenshot + title cards + TTS narration, and hosted permanently as a
+  GitHub release asset so the link cannot expire before judging.
+
+What failed:
+- BscScan verification attempt 1 failed on optimizer settings (form said
+  Yes, bytecode was compiled with optimizer off). Fix: pin optimizer=false
+  in foundry.toml so rebuilds reproduce the deployed bytecode.
+- Binance login in the cloud browser stalled at MFA (authenticator +
+  facial verification cannot be done by an agent) and browser takeover did
+  not work from the phone. Fix: move the submission to the user's own
+  Chrome, where the session already existed — no login was needed there.
+- The browser planner misread an interim "video still being made" update
+  as a standing instruction and held the form at Section IV even after the
+  finished video link was supplied. Fix: send one explicit correction
+  naming the old message as superseded; never let a progress update read
+  like a stop instruction.
+- The form's Code Repository field was first filled with the GitHub
+  profile URL instead of the repo URL. Fix: Edit Response to the exact
+  repo URL before closing the task.
+
+What to improve:
+- Read the whole form first (all sections, required fields, no-field
+  surprises like Q12 demo video) before starting to fill it.
+- Prefer permanent hosting (GitHub release, YouTube) over expiring
+  storage links for anything a jury opens weeks later.
+- Keep agent-facing updates unambiguous: status notes must never sound
+  like new instructions to a downstream worker.
