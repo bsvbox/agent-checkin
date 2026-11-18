@@ -1,0 +1,11 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+# IMPORTANT: the deployed contract (18 Nov 2026) was compiled with the
+# optimizer DISABLED (forge 1.9 default). Keep this pinned: BscScan
+# verification must use Optimization: No, or the bytecode will not match.
+optimizer = false
+optimizer_runs = 200
+evm_version = "cancun"
